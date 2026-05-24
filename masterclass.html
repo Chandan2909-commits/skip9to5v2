@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Masterclass — Skip9to5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="masterclass.css" />
+</head>
+<body>
+
+  <!-- COUNTDOWN BANNER -->
+  <div class="mc-countdown-bar">
+    <span class="mc-countdown-label">&#128197; Next Masterclass Starts In</span>
+    <div class="mc-countdown-timer">
+      <div class="mc-cd-unit"><span id="cdHours">24</span><small>Hours</small></div>
+      <div class="mc-cd-sep">:</div>
+      <div class="mc-cd-unit"><span id="cdMins">00</span><small>Mins</small></div>
+      <div class="mc-cd-sep">:</div>
+      <div class="mc-cd-unit"><span id="cdSecs">00</span><small>Secs</small></div>
+    </div>
+    <a href="masterclass-upi-payment.html" class="mc-cd-cta">Reserve Seat &#8594;</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-island" id="navIsland">
+      <div class="logo">
+        <img src="skip.png" alt="Skip Logo" class="nav-logo-img nav-logo-desktop" />
+        <img src="Skip9to5-LOGO.png" alt="Skip Logo" class="nav-logo-img nav-logo-mobile" />
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#mentors">About Us</a></li>
+        <li><a href="#" class="active">Masterclass</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <!-- <li><a href="community.html">Community</a></li> -->
+        <li><a href="index.html#testimonials">Success Stories</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="mc-hero">
+    <div class="mc-hero-grid"></div>
+    <div class="mc-hero-blob b1"></div>
+    <div class="mc-hero-blob b2"></div>
+    <div class="mc-hero-inner">
+      <span class="mc-eyebrow" data-animate="fade-down">&#127891; Skip9to5 Trading Masterclass</span>
+      <h1 data-animate="fade-up" data-delay="100">Learn To Read Every Move.<br /><span class="mc-gold">Become The 1% Trader.</span></h1>
+      <p data-animate="fade-up" data-delay="200">Learn markets through structure, discipline, and real-time execution guided by experienced mentors inside live market conditions.</p>
+      <a href="masterclass-upi-payment.html" class="mc-btn-primary" data-animate="zoom-in" data-delay="300">Reserve Your Seat &#8594;</a>
+      <button class="mc-btn-free-call" data-animate="zoom-in" data-delay="400" id="openCallModal">&#128222; Book a Free Call</button>
+    </div>
+    <!-- Stats bar -->
+    <div class="mc-stats-bar" data-animate="fade-up" data-delay="400">
+      <div class="mc-stat"><strong>3</strong><span>Months</span></div>
+      <div class="mc-stat-div"></div>
+      <div class="mc-stat"><strong>12</strong><span>Weeks</span></div>
+      <div class="mc-stat-div"></div>
+      <div class="mc-stat"><strong>70+</strong><span>Topics</span></div>
+      <div class="mc-stat-div"></div>
+      <div class="mc-stat"><strong>100+</strong><span>Hours</span></div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="mc-curriculum">
+    <div class="mc-section-inner">
+      <div class="mc-section-head" data-animate="fade-up">
+        <h2>What You'll <span class="mc-gold">Learn</span></h2>
+        <p>A structured 3-month journey from market fundamentals to professional-level execution.</p>
+      </div>
+
+      <div class="mc-months">
+
+        <!-- WEEK 1-2 -->
+        <div class="mc-month" data-animate="fade-right" data-delay="100">
+          <div class="mc-month-label">Week 1 – 2</div>
+          <h3 class="mc-month-title">Foundation &amp; Market Basics</h3>
+          <div class="mc-modules">
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Investing &amp; Market Introduction</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Introduction to Stocks, Bonds, Global Markets, Crypto &amp; F&amp;O</li>
+                <li>Passive Investing strategies</li>
+                <li>Fundamental Analysis</li>
+                <li>Financial Ratio Analysis</li>
+              </ul>
+            </div>
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Positional Trading &amp; Strategies</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Positional Trading with Trend-following</li>
+                <li>Timing bull &amp; bear market runs</li>
+                <li>Trading with Time cycles</li>
+                <li>Creating Portfolios on Small case</li>
+                <li>Daytrading with 5-EMA</li>
+                <li>IPO &amp; Grey Market Analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEEK 3-4 -->
+        <div class="mc-month" data-animate="fade-left" data-delay="150">
+          <div class="mc-month-label">Week 3 – 4</div>
+          <h3 class="mc-month-title">Advanced Trading &amp; Market Structure</h3>
+          <div class="mc-modules">
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Trade Locations &amp; Technical Analysis</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>IPO Short Strategies</li>
+                <li>Momentum Switch Strategy</li>
+                <li>Range Trading</li>
+                <li>S&amp;R Practical Trading</li>
+                <li>Demand and Supply zone Setup</li>
+                <li>Intro to SMC — BoS, Choch</li>
+              </ul>
+            </div>
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Futures, Options &amp; Derivatives</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Introduction to Derivatives</li>
+                <li>Futures Trading Concepts</li>
+                <li>Options Fundamentals — Calls, Puts, Strike Selection</li>
+                <li>Option Greeks &amp; Volatility</li>
+                <li>Option Strategies — Directional &amp; Non-directional</li>
+                <li>Institutional &amp; Data Analysis</li>
+                <li>Advanced Execution &amp; Risk Management</li>
+              </ul>
+            </div>
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Market Structure Foundations</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Auction Market Theory</li>
+                <li>Rules of Price Behaviour</li>
+                <li>Liquidity (types, pools, and zones)</li>
+                <li>Price Inefficiency Theory</li>
+                <li>Market Profile (TPO, value area, POC)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEEK 5-6 -->
+        <div class="mc-month" data-animate="fade-right" data-delay="200">
+          <div class="mc-month-label">Week 5 – 6</div>
+          <h3 class="mc-month-title">Professional Trading &amp; Funding</h3>
+          <div class="mc-modules">
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Order Flow &amp; Institutional Activity</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Order Flow Analysis</li>
+                <li>Iceberg Orders</li>
+                <li>Understanding institutional trading patterns</li>
+                <li>Liquidity Engineering</li>
+                <li>Price Inducement</li>
+                <li>Liquidity Traps and Sweeps</li>
+              </ul>
+            </div>
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Advanced Strategies &amp; Global Markets</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Market Manipulations</li>
+                <li>Base Manipulations</li>
+                <li>Price Deliveries</li>
+                <li>Volume / Gap Imbalances</li>
+                <li>Global Markets Trading Fundamentals</li>
+                <li>Currency Pairs &amp; Trading Sessions</li>
+                <li>VWAP Trading Strategies</li>
+              </ul>
+            </div>
+            <div class="mc-module">
+              <div class="mc-module-header" onclick="toggleModule(this)">
+                <span>Risk Management &amp; Funding</span>
+                <span class="mc-chevron">&#8250;</span>
+              </div>
+              <ul class="mc-module-body">
+                <li>Position sizing and lot sizes</li>
+                <li>Risk management in derivatives</li>
+                <li>Understanding market risk &amp; India VIX</li>
+                <li>VWAP sniper trading setup</li>
+                <li>Prop firms for Global Markets</li>
+                <li>Skip9to5 prop firm funding</li>
+                <li>Hacking funded programs</li>
+                <li>Psychology for funded accounts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="mc-cta">
+    <div class="mc-cta-inner" data-animate="zoom-in">
+      <h2>Ready to Become a <span class="mc-gold">Professional Trader?</span></h2>
+      <p>Join thousands of traders who've transformed their journey with Skip9to5's structured masterclass.</p>
+      <div class="mc-cta-btns">
+        <a href="masterclass-upi-payment.html" class="mc-btn-primary">Purchase Now &#8594;</a>
+        <a href="contact.html" class="mc-btn-outline">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-col footer-col--address">
+        <div class="footer-logo">
+          <img src="skip.png" alt="Skip9to5 Logo" class="footer-logo-img" />
+        </div>
+        <h4>Corporate Address</h4>
+        <p>Skip9To5<br />
+          Quarnex M&T Labs LLP<br />
+          Floor 6th, Summit Tower<br />
+          Gomti Nagar, Lucknow, U.P., India</p>
+      </div>
+      <div class="footer-col footer-col--contact">
+        <h4>Contact Us</h4>
+        <p><span class="footer-icon">&#128222;</span> <a href="tel:+917380852004">+91 7380852004</a></p>
+        <p><span class="footer-icon">&#9993;</span> <a href="mailto:care@skip9to5.com">care@skip9to5.com</a></p>
+        <h4 style="margin-top:36px">Business Hours</h4>
+        <p class="footer-hours-sub">Our Customer Support is Available at the Following Hours</p>
+        <p>Mon-Fri: 9:00 AM &ndash; 6:00 PM IST<br />
+          Sat: 10:00 AM &ndash; 2:00 PM IST<br />
+          Sun: Closed</p>
+        <p class="footer-hours-note">We strive to respond to all email inquiries within 24 hours.</p>
+      </div>
+      <div class="footer-col footer-col--nav">
+        <a href="index.html" class="footer-nav-home">Home</a>
+        <a href="index.html#mentors">About Us</a>
+        <a href="#">Masterclass</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#testimonials">Success Stories</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Skip9to5. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" class="fs-icon" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="#" class="fs-icon" aria-label="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+        </a>
+        <a href="#" class="fs-icon" aria-label="YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+        <a href="#" class="fs-icon" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" class="fs-icon" aria-label="X (Twitter)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-social">
+    <a href="#" class="float-yt" aria-label="YouTube">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+    </a>
+    <a href="#" class="float-wa" aria-label="WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- BOOK A FREE CALL MODAL -->
+  <div class="fcall-overlay" id="callModal" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+    <div class="fcall-modal">
+      <button class="fcall-close" id="closeCallModal" aria-label="Close">&times;</button>
+      <h3 id="callModalTitle">&#128222; Book a Free Call</h3>
+      <p>Fill in your details and we'll reach out to schedule your free strategy call.</p>
+      <form id="freeCallForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email ID" required />
+        <button type="submit" id="callSubmitBtn">Book My Free Call</button>
+        <p id="callFormStatus" class="fcall-status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Countdown — May 24, 2026 at 00:00 IST
+    (function () {
+      const targetDate = new Date('2026-05-31T00:00:00+05:30').getTime();
+      function tick() {
+        const diff = Math.max(0, targetDate - Date.now());
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+        document.getElementById('cdMins').textContent  = String(m).padStart(2, '0');
+        document.getElementById('cdSecs').textContent  = String(s).padStart(2, '0');
+        if (diff > 0) requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+    const navIsland = document.getElementById('navIsland');
+    const navHamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    window.addEventListener('scroll', () => {
+      navIsland.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    navHamburger.addEventListener('click', () => {
+      navHamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!navIsland.contains(e.target)) {
+        navHamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+
+    // Accordion
+    function toggleModule(header) {
+      const body = header.nextElementSibling;
+      const chevron = header.querySelector('.mc-chevron');
+      const isOpen = body.classList.contains('open');
+      // close all in same month
+      header.closest('.mc-modules').querySelectorAll('.mc-module-body').forEach(b => b.classList.remove('open'));
+      header.closest('.mc-modules').querySelectorAll('.mc-chevron').forEach(c => c.classList.remove('rotated'));
+      if (!isOpen) {
+        body.classList.add('open');
+        chevron.classList.add('rotated');
+      }
+    }
+
+    // Free Call Modal
+    const CALL_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzf9CMsB3ORaiph2vqpT7WG5SyRgx6KIJ3NQXLl-ib7HVEDdV_2F7fscIm9G38dktUA/exec';
+    const callModal = document.getElementById('callModal');
+    document.getElementById('openCallModal').addEventListener('click', () => {
+      callModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeModal() {
+      callModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('closeCallModal').addEventListener('click', closeModal);
+    callModal.addEventListener('click', (e) => { if (e.target === callModal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    document.getElementById('freeCallForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('callSubmitBtn');
+      const status = document.getElementById('callFormStatus');
+      const form = e.target;
+      const data = {
+        name: form.name.value.trim(),
+        phone: form.phone.value.trim(),
+        email: form.email.value.trim(),
+      };
+      btn.disabled = true;
+      btn.textContent = 'Booking...';
+      status.textContent = '';
+      status.className = 'fcall-status';
+      try {
+        await fetch(CALL_SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        status.textContent = '✓ Booked! We\'ll call you soon.';
+        status.classList.add('success');
+        form.reset();
+        setTimeout(closeModal, 2500);
+      } catch {
+        status.textContent = 'Something went wrong. Please try again.';
+        status.classList.add('error');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Book My Free Call';
+      }
+    });
+  </script>
+  <script src="animate.js"></script>
+</body>
+</html>
