@@ -819,49 +819,58 @@ body {
   overflow: hidden;
 }
 
-.vw-grid {
+/* ── VIDEO WALL HEADER ── */
+.vw-header {
+  text-align: center;
+  padding: 0 24px 8px;
+}
+.vw-header h2 {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+}
+.vw-header-highlight {
+  color: #d9a441;
+}
+
+/* ── SHORTS ROW ── */
+.vw-shorts-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 0 24px;
-  min-height: 620px;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 32px;
+  min-height: 700px;
 }
 
-/* each column */
-.vw-col {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-}
-.vw-col--offset {
-  margin-top: 80px;
-}
-.vw-col--tall {
-  flex: 1.2;
-}
-
-/* individual video card */
-.vw-item {
+/* each short card — 9:16 portrait */
+.vw-short {
   position: relative;
-  border-radius: 14px;
+  width: 260px;
+  height: 462px; /* 9:16 ratio */
+  border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
   background: #111;
-  height: 260px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
 }
-.vw-item--sm     { height: 180px; }
-.vw-item--tall   { height: 420px; }
-.vw-item--center { height: 360px; }
 
-.vw-item img {
+/* stagger: odd cards shift up, even cards shift down */
+.vw-short--up   { transform: translateY(-50px); }
+.vw-short--down { transform: translateY(50px); }
+
+.vw-short img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease, filter 0.4s ease;
-  filter: brightness(0.75);
+  filter: brightness(0.72);
 }
 
 /* overlay + play button */
@@ -871,7 +880,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.2);
   transition: background 0.3s;
 }
 .vw-play {
@@ -891,25 +900,43 @@ body {
 /* caption */
 .vw-caption {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  font-size: 12px;
+  bottom: 14px;
+  left: 10px;
+  right: 10px;
+  font-size: 11px;
   font-weight: 600;
   color: #fff;
-  background: rgba(0,0,0,0.55);
-  padding: 3px 8px;
-  border-radius: 4px;
+  background: rgba(0,0,0,0.6);
+  padding: 4px 8px;
+  border-radius: 6px;
   backdrop-filter: blur(4px);
+  text-align: center;
+  line-height: 1.4;
 }
 
-/* hover effects */
-.vw-item:hover img        { transform: scale(1.05); filter: brightness(0.9); }
-.vw-item:hover .vw-overlay { background: rgba(0,0,0,0.1); }
-.vw-item:hover .vw-play   { transform: scale(1.15); background: #fff; }
+/* hover */
+.vw-short:hover img         { transform: scale(1.06); filter: brightness(0.9); }
+.vw-short:hover .vw-overlay { background: rgba(0,0,0,0.05); }
+.vw-short:hover .vw-play    { transform: scale(1.15); background: #fff; }
+.vw-short--up:hover   { transform: translateY(-58px); box-shadow: 0 16px 48px rgba(217,164,65,0.25); }
+.vw-short--down:hover { transform: translateY(58px);  box-shadow: 0 16px 48px rgba(217,164,65,0.25); }
 
-/* stagger animation delays handled via data-delay attributes */
+/* mobile: horizontal scroll */
+@media (max-width: 768px) {
+  .vw-shorts-row {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 40px 20px;
+    gap: 12px;
+    scrollbar-width: none;
+  }
+  .vw-shorts-row::-webkit-scrollbar { display: none; }
+  .vw-short { width: 160px; height: 284px; }
+  .vw-short--up, .vw-short--down { transform: none; }
+  .vw-short--up:hover, .vw-short--down:hover { transform: translateY(-6px); }
+}
 
-/* ── YOUTUBE MODAL ── */
+/* ── YOUTUBE MODAL — Shorts (9:16) ── */
 .yt-modal {
   position: fixed;
   inset: 0;
@@ -936,10 +963,9 @@ body {
 .yt-modal-box {
   position: relative;
   z-index: 1;
-  width: 90%;
-  max-width: 900px;
+  width: min(360px, 90vw);
   background: #000;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 32px 80px rgba(0,0,0,0.8);
   transform: scale(0.92);
@@ -951,7 +977,7 @@ body {
 
 .yt-frame-wrap {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 177.78%; /* 9:16 */
   height: 0;
 }
 .yt-frame-wrap iframe {
